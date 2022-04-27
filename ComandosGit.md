@@ -20,7 +20,7 @@ Una vez agregados los cambios al staging area, registramos estos cambios al repo
 Una forma ideal de hacer commit es hacerlo con un mensaje de cambio ej:
 **git commit -m "Primera version"**
 Si no ponemos un mensaje nos lleva a un editor vim, para que pongamos el mensaje.
-Una vez colocado el mensaje para el commit, salimos del vim con **esc + shift + zz**.
+Una vez colocado el mensaje para el commit, salimos del vim con **esc + shift + zz** o escribimos **wq**.
 
 **git commit -am " "**
 
