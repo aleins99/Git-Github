@@ -69,7 +69,9 @@ Este elimina el archivo modificado de nuestro staging area. Sirve cuando hacemos
 Esto nos devuelve la diferencia entre el commit a con el commit b, nos devuelve que cambios difieren entre esos dos commit.
 
 Para ver los codigos de commit esto se hace con **git log** el codigo es es el que le sigue a la palabra commit
+
 ![git log](https://desarrolloweb.com/archivoimg/general/4092.png)
+
 son esos codigos de b2c07....
 Ej: git diff b2c07.. fa42f3..
 
