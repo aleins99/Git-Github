@@ -54,6 +54,10 @@ Muestra el ultimo commit realizado con los cambios realizados.
 
 Muestra todos los commits realizados. En cada commit nos muestra el codigo del commit, autor con el correo, la fecha, y el msj del commit.
 
+Podemos agregar parametros como **--oneline** esto hace que solo veamos el prefijo del commitId con solo el mensaje.
+
+Otro parametro es **--abbrev-commit** como su nombre lo indica nos trae todos los commits pero con una abreviacion del commitId.
+
 ## git log nombreArchivo.extension
 
 Muestra todos los commits hecho a ese archivo.
