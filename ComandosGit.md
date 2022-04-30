@@ -25,7 +25,9 @@ Una vez colocado el mensaje para el commit, salimos del vim con **esc + shift + 
 **git commit -am " "**
 
 Con esto podemos hacer un commit sin necesidad de hacer un git add anteriormente. Pero para los archivos que ya se hicieron git add anteriormente, si el archivo es totalmente nuevo esto no funcionará.
+**git commit --amend**
 
+Con este comando deshacemos el ultimo commit. Esto sirve porn si hacemos un commit mal ya sea pusimos mal el mensaje o no incluimos todos los archivos. Obs: se modifica los archivos antes de hace el commit --amend, si por ejemplo no incluimos un archivo y hicimos commit para agregar ese archivo al commit, hacemos git add del archivo y luego hacemos commit --amend.
 ![Proceso de Git](https://res.cloudinary.com/practicaldev/image/fetch/s--D7nJOADN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://cl.ly/569e7f0bbfaf/download/Image%25202018-08-29%2520at%25208.26.35%2520PM.png)
 
 Working directory: es nuestro directorio en el que estamos trabajando, el directorio que estamos modificando en nuestra pc.
@@ -114,7 +116,7 @@ Con esto podemos crear una nueva rama, al principio solo existe la rama main, pe
 
 La rama sirve para que los desarrolladores trabajen en algo en especifico y no modifiquen la rama main, como por ejemplo a alguien se le asigno la rama cabecera y con git branch crea esa rama sin modificar la rama main. **git branch cabecera**
 
-Para movernos de una rama a otra rama, como por ejemplo de la rama main a la rama head, lo hacemos con git checkout nombrerama,
+Para movernos de una rama a otra rama, como por ejemplo de la rama main a la rama head, lo hacemos con **git checkout nombrerama**,
 
 git checkout main: nos lleva a la rama main.
 
@@ -133,3 +135,9 @@ Esto nos fusiona el contenido de nombreRama con nuestra rama actual, con **git s
 Si creamos una rama cabecera y queremos ya mezclar el contenido de esa rama con nuestra rama principal, estando en la rama main hacemos **git branch cabecera**. Esto añadirá todos los cambios que hicimos en la rama cabecera a la rama main.
 
 ❗**Siempre es bueno agregar a la rama main en lugar de agregar a la rama secundaria el contenido de la rama main.**
+
+## git switch nombreRama
+
+Nos movemos a nombreRama, es lo mismo que git checkout nombreRama pero este es mas práctico.
+
+Tambien tenemos **git switch -c nombreRama**: este comando nos crea una nueva rama y nos mueve a esa rama de una, es un shortcut al **git branch nombreRama y luego git switch nombreRama**.
