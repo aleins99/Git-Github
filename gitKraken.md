@@ -9,3 +9,5 @@ Si hacemos cambios a nuestro repositorio, veremos algo como esto:
 <img src="imagenes/gitKraken-Commit.png" width=300 height=300>
 
 Esto nos muestra los archivos modificados en el repositorio, y podemos agregar todos los archivos modificados con la opcion **Stage all changes** como un **git add .** o agregarlos uno por uno que sería moover el mouse sobre el archivo y saltará la opcion de **Stage file**, que seria como un git add nombreArchivo.extension, luego abajo ponemos el mensaje que va con ese commit y le damos a **Stage files/changes to commit**.
+
+Si queremos ver los cambios que se hicieron a un archivo en especifico en ese commit, solamente dandole click al commit y luego al archivo ya nos mostrará que se agregó.
