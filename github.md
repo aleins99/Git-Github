@@ -55,3 +55,30 @@ Ej de como agregar archivos y carpetas en git ignore.
 ![add people](imagenes/addPeople.png)
 
 Ponemos su correo o su usuario de github para agregarlo.
+
+## Pull request
+
+Es una funcionalidad de github (en gitlab llamada merge request y en bitbucket push request), en la que un colaborador pide que revisen sus cambios antes de hacer merge a una rama, normalmente master.
+
+Al hacer un pull request se genera una conversación que pueden seguir los demás usuarios del repositorio, así como autorizar y rechazar los cambios.
+
+El flujo del pull request es el siguiente
+
+1. Se trabaja en una rama paralela los cambios que se desean **(git checkout -b nombreRama)**
+1. Se hace un commit a la rama **(git commit -am "")**
+1. Se suben al remoto los cambios **(git push origin <rama>)**
+1. En GitHub se hace el pull request comparando la rama master con la rama del fix.
+1. Uno, o varios colaboradores revisan que el código sea correcto y dan feedback (en el chat del pull request)
+1. El colaborador hace los cambios que desea en la rama y lo vuelve a subir al remoto (automáticamente jala la historia de los cambios que se hagan en la rama, en remoto)
+1. Se aceptan los cambios en GitHub
+1. Se hace merge a master desde GitHub
+
+❗**Importante**: Cuando se modifica una rama, también se modifica el pull request.
+
+## Fork
+
+Hacer una copia de un repositorio de alguien mas y lo agrega a nuestros repositorios en nuestra cuenta de Github.
+
+## git clone linkRepo
+
+Clonamos un repo a nuestro ordenador. Esto nos descarga una carpeta con el nombre del repo con todo su contenido y ya con el .git. Y lo crea en la ruta de nuestra linea de comandos donde hicimos el git clone.
