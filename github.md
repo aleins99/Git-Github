@@ -38,4 +38,12 @@ Ej de como agregar archivos y carpetas en git ignore.
 
 **Pasos para agregar colaboradores a nuestro proyecto**
 
-Settings ![settings](imagenes/settings.png) 👉 Parte izquierda, collaborators![collaborators](imagenes/collaborators.png) 👉 Y finalmente add people ![add people](imagenes/addPeople.png) Ponemos su correo o su usuario de github para agregarlo.
+Settings ![settings](imagenes/settings.png) 👉 Parte izquierda, collaborators
+
+![collaborators](imagenes/collaborators.png)
+
+👉 Y finalmente add people
+
+![add people](imagenes/addPeople.png)
+
+Ponemos su correo o su usuario de github para agregarlo.
