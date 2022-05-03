@@ -77,7 +77,7 @@ El flujo del pull request es el siguiente
 
 ## Fork
 
-Hacer una copia de un repositorio de alguien mas y lo agrega a nuestros repositorios en nuestra cuenta de Github.
+Hace una copia de un repositorio de alguien mas y lo agrega a nuestros repositorios en nuestra cuenta de Github.
 
 ## git clone linkRepo
 
