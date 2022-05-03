@@ -82,3 +82,5 @@ Hace una copia de un repositorio de alguien mas y lo agrega a nuestros repositor
 ## git clone linkRepo
 
 Clonamos un repo a nuestro ordenador. Esto nos descarga una carpeta con el nombre del repo con todo su contenido y ya con el .git. Y lo crea en la ruta de nuestra linea de comandos donde hicimos el git clone.
+
+❗Para poder clonarlo, ese repositorio tiene que estar en nuestros repositorios de github. Si no lo tenemos hay que hacerle un fork a ese repositorio y luego ya podremos clonarlo.
