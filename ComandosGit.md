@@ -141,3 +141,5 @@ Si creamos una rama cabecera y queremos ya mezclar el contenido de esa rama con 
 Nos movemos a nombreRama, es lo mismo que git checkout nombreRama pero este es mas práctico.
 
 Tambien tenemos **git switch -c nombreRama**: este comando nos crea una nueva rama y nos mueve a esa rama de una, es un shortcut al **git branch nombreRama y luego git switch nombreRama**.
+
+## git stash
