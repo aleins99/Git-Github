@@ -85,12 +85,12 @@ Clonamos un repo a nuestro ordenador. Esto nos descarga una carpeta con el nombr
 
 ❗Para poder clonarlo, ese repositorio tiene que estar en nuestros repositorios de github. Si no lo tenemos hay que hacerle un fork a ese repositorio y luego ya podremos clonarlo.
 
-## Como traer nuevos cambios de un repo.
+## Como traer nuevos cambios del repo original.
 
-Si forkeamos un repo de alguien mas y luego de hacer fork y clonar ese repo, esa persona ya hizo nuevos cambios. No podemos directamente hacer un **git pull origin main** porque solo traeremos los cambios de nuestro repo y no del original.
+Si forkeamos un repo de alguien mas y luego de hacer fork y clonar ese repo, esa persona ya hizo nuevos cambios, no podemos directamente hacer un **git pull origin main** porque solo traeremos los cambios de nuestro repo y no del original.
 
-Para solucionar esto, creamos una nueva rama y lo hacemos con **git remote add upstream linkRepoOriginal** esto no trae al repo original guardado en **upstream** y podemos verificar que se agregó con **git remote -v** veremos que tenemos dos ramas, una que sería **origin** que es de nuestro repo y otra que sería **upstream** que es del repo original. Ya teniendo esa rama podemos traer los nuevos cambios con **git pull upstream main**.
+Para solucionar esto, creamos una nueva rama y lo hacemos con **git remote add upstream linkRepoOriginal** esto no trae al repo original guardado en **upstream** y podemos verificar que se agregó con **git remote -v**,veremos que tenemos dos ramas, una que sería **origin** que es de nuestro repo y otra que sería **upstream** que es del repo original. Ya teniendo esa rama podemos traer los nuevos cambios con **git pull upstream main**.
 
 Obs: puede ser upstream o cualquier nombre para el repo original pero conmunmente se usa upstream.
 
-❗Ahora ya que tenemos una rama del repo original siempre que haiga cambios en ella podemos traernos directamente esos cambios con **git pull upstream main**
+Ahora ya que tenemos una rama del repo original siempre que haiga cambios en ella podemos traernos directamente esos cambios con **git pull upstream main**

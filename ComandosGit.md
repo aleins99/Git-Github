@@ -8,33 +8,37 @@ Empezar en la carpeta del disco duro un repositorio, esto crea la carpeta .git q
 
 ## git [add](https://git-scm.com/docs/git-add) "nombreArchivo".extension
 
-Agrega los cambios del archivo al staging area, si no existe el archivo aún los crea.
+Agrega los cambios del archivo al staging area, si no existe el archivo aún, los crea.
 
 ## git add .
 
-Esto agrega todos los cambios de todos los archivos al stanging area
+Esto agrega todos los cambios de todos los archivos del directorio en el que estamos al stanging area
 
 ## [git commit](https://git-scm.com/docs/git-commit)
 
 Una vez agregados los cambios al staging area, registramos estos cambios al repositorio.
 Una forma ideal de hacer commit es hacerlo con un mensaje de cambio ej:
 **git commit -m "Primera version"**
-Si no ponemos un mensaje, nos lleva a un editor vim, para que pongamos el mensaje.
+Si no ponemos un mensaje, nos lleva a un editor vim o (nano en ubuntu), para que pongamos el mensaje.
 Una vez colocado el mensaje para el commit, salimos del vim con **esc + shift + zz** o escribimos **wq**.
 
 **git commit -am " "**
 
-Con esto podemos hacer un commit sin necesidad de hacer un git add anteriormente. Pero para los archivos que ya se hicieron git add anteriormente, si el archivo es totalmente nuevo esto no funcionará.
+Con esto podemos hacer un commit sin necesidad de hacer un git add anteriormente. Pero esto sirve para los archivos que ya se hicieron git add anteriormente, si el archivo es totalmente nuevo esto no funcionará.
+
 **git commit --amend**
 
-Con este comando deshacemos el ultimo commit. Esto sirve porn si hacemos un commit mal ya sea pusimos mal el mensaje o no incluimos todos los archivos. Obs: se modifica los archivos antes de hace el commit --amend, si por ejemplo no incluimos un archivo y hicimos commit para agregar ese archivo al commit, hacemos git add del archivo y luego hacemos commit --amend.
+Con este comando deshacemos el ultimo commit. Esto sirve por si hacemos un commit mal, ya sea pusimos mal el mensaje o no incluimos todos los archivos.
+
+Obs: se modifica los archivos antes de hace el commit --amend, si por ejemplo no incluimos un archivo y hicimos commit para agregar ese archivo al commit, hacemos git add del archivo y luego hacemos commit --amend.
+
 ![Proceso de Git](https://res.cloudinary.com/practicaldev/image/fetch/s--D7nJOADN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://cl.ly/569e7f0bbfaf/download/Image%25202018-08-29%2520at%25208.26.35%2520PM.png)
 
 Working directory: es nuestro directorio en el que estamos trabajando, el directorio que estamos modificando en nuestra pc.
 
-Staging area:
+Staging area: es donde se guarda antes de mandarlo al repositorio.
 
----
+repository : este seria el repositorio donde vamos a tener guardado todos nuestros archivos.
 
 ## git status
 
@@ -50,7 +54,7 @@ Esto muestra todos los cambios hechos en el ultimo commit.
 
 ## git show nombreArchivo.extension
 
-Muestra el ultimo commit realizado con los cambios realizados.
+Muestra todos los cambios que hicimos en el último commit pero a este archivo en específico.
 
 ## git log
 
@@ -64,7 +68,7 @@ Otro parametro es **--abbrev-commit** como su nombre lo indica nos trae todos lo
 
 Muestra todos los commits hecho a ese archivo.
 
-Si en lugar del nombre del archivos ponemos el codigo del commit nos muestras todos los commit hechos hasta ese commit.
+Si en lugar del nombre del archivo ponemos el codigo del commit, nos muestras todos los commit hechos hasta ese commit (HEAD -> ramaActual).
 
 ## git rm --cached nombreArchivo.extension
 
@@ -74,7 +78,7 @@ Este elimina el archivo modificado de nuestro staging area. Sirve cuando hacemos
 
 Esto nos devuelve la diferencia entre el commit a con el commit b, nos devuelve que cambios difieren entre esos dos commit.
 
-Para ver los codigos de commit esto se hace con **git log** el codigo es es el que le sigue a la palabra commit
+Para ver los codigos de commit esto se hace con **git log** el codigo es es el que le sigue a la palabra commit.
 
 ![git log](https://desarrolloweb.com/archivoimg/general/4092.png)
 
@@ -92,13 +96,13 @@ Esto es bueno ya que asi podemos saber que de nuevo tiene nuestro archivo compar
 Nos permite volver a la version de ese commit.
 Git reset tiene 1 parametro adicional --soft o --hard "este parametro va después del commitId".
 
---soft: nos devuelve a esa version pero todo lo que seguia en el staging area sigue ahi.
+--soft: nos devuelve a esa version pero todo lo que seguia en el staging area sigue ahí.
 
 --hard: nos devuelve a esa version completamente. Es decir si volvemos al primer commit hecho nos traerá todos los primeros cambios que hemos hechos en ese commit y los cambios siguientes con los otros commit quedarán eliminados.
 
 ## git checkout commitId archivo.extension
 
-Nos regresa a como era el archivo en ese commit.
+Nos regresa a como era el archivo en ese commit. Pero a diferencia de git reset, podemos volver sin problemas a como estaba anteriormente.
 
 👀❗Esto nos modifica a como estaba el achivo, si hacemos git add y luego git commit, perdemos como se veia nuestro archivo originalmente. Para volver a su estado original es con el comando de abajo.
 
