@@ -147,3 +147,5 @@ Nos movemos a nombreRama, es lo mismo que git checkout nombreRama pero este es m
 Tambien tenemos **git switch -c nombreRama**: este comando nos crea una nueva rama y nos mueve a esa rama de una, es un shortcut al **git branch nombreRama y luego git switch nombreRama**.
 
 ## git stash
+
+Con este comando podemos guardar cambios que no aun no queremos hacerles commits, serviría por _EJ_: si hacemos cambios a un archivo y aun no queremos hacer **git add** ni **git commit** y queremos mudarnos a otra rama sin perder esos cambios. Para esto nos sirve **git stash**, nos guarda los cambios que hicimos, poder cambiarnos a otra rama y luego volver a nuestra rama y recuperar esos cambios con **git stash pop**.
