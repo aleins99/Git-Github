@@ -149,3 +149,31 @@ Tambien tenemos **git switch -c nombreRama**: este comando nos crea una nueva ra
 ## git stash
 
 Con este comando podemos guardar cambios que no aun no queremos hacerles commits, serviría por _EJ_: si hacemos cambios a un archivo y aun no queremos hacer **git add** ni **git commit** y queremos mudarnos a otra rama sin perder esos cambios. Para esto nos sirve **git stash**, nos guarda los cambios que hicimos, poder cambiarnos a otra rama y luego volver a nuestra rama y recuperar esos cambios con **git stash pop**.
+
+## git rebase
+
+Git rebase es una operación fundamental en Git que se utiliza para combinar cambios de una rama en otra de una manera más limpia y lineal que una fusión tradicional (merge). A continuación, te explicaré cómo funciona el comando **git rebase** y cuándo es útil:
+
+1. **Entendiendo el Problema**:
+   Imagina que tienes una rama principal (por ejemplo, **main**) y has creado una rama secundaria (por ejemplo, **mi_feature**) para trabajar en una nueva función. Mientras trabajas en **mi_feature**, es posible que otros colaboradores hayan estado haciendo cambios en la rama **main**. Cuando terminas tu trabajo en **mi_feature**, deseas incorporar estos cambios de **main** en tu rama de manera que tu historia de commits sea más limpia y no tenga ramificaciones innecesarias.
+
+2. **Pasos para utilizar **git rebase**:
+   A continuación, se muestra cómo usar **git rebase** en este escenario:
+   - Asegúrate de estar en la rama **mi_feature**: **git checkout mi_feature**
+   - Luego, ejecuta el comando de rebase: **git rebase main**
+
+   Lo que hace esto es tomar todos los commits que hiciste en **mi_feature**, los quita temporalmente, lleva tu rama a la punta de **main**, y luego aplica tus commits nuevamente uno por uno en la parte superior de **main**. Esto crea una historia de commits lineal y limpia.
+
+3. **Resolución de Conflictos**:
+   Es posible que surjan conflictos durante el proceso de rebase si los cambios en **main** y **mi_feature** afectan las mismas líneas de código. Debes resolver estos conflictos manualmente, y luego continuar el proceso de rebase con **git rebase --continue**.
+
+4. **Ventajas de Git Rebase**:
+   - Mantiene una historia de commits más lineal y limpia en comparación con las fusiones, lo que facilita la revisión y la comprensión de la historia del proyecto.
+   - Ayuda a evitar commits de fusión innecesarios que pueden ensuciar la historia del repositorio.
+   - Facilita la identificación y corrección de conflictos durante el proceso de rebase.
+
+5. **Precauciones**:
+   - No debes rebasear ramas que compartes con otros colaboradores, ya que reescribir la historia puede causar problemas en el trabajo de los demás.
+   - Es seguro utilizar **git rebase** en ramas privadas o temporales, pero debes ser cauteloso al hacerlo en ramas compartidas.
+
+En resumen, **git rebase** es útil para mantener una historia de commits limpia y lineal al incorporar cambios de una rama en otra. Sin embargo, debes usarlo con cuidado y comprender sus implicaciones, especialmente cuando trabajas en colaboración con otros desarrolladores.
